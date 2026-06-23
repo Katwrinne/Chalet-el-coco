@@ -4,44 +4,378 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Tienda</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            color: #333;
+            font-size: 2.5em;
+        }
+
+        header p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .contador {
+            background: #3498db;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .producto {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .producto:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .producto img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #eee;
+        }
+
+        .producto h3 {
+            margin: 15px 0 10px;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .precio {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        .categoria {
+            display: inline-block;
+            background: #ecf0f1;
+            color: #555;
+            font-size: 0.75em;
+            padding: 3px 12px;
+            border-radius: 12px;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .catalogo {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .producto img {
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
     
     <header>
-        <h1>el coco</h1>
+        <h1>🏪 Mi Tienda</h1>
         <p>Conoce nuestros productos</p>
+        <span class="contador">📦 30 productos disponibles</span>
     </header>
 
     <main class="catalogo">
         
-        <!-- Producto 1 -->
+        <!-- 1 -->
         <div class="producto">
-            <img src="imagenes/producto1.jpg" alt="Nombre del producto">
+            <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Camiseta" alt="Camiseta Deportiva">
             <h3>Camiseta Deportiva</h3>
             <p class="precio">$19.99</p>
+            <span class="categoria">👕 Ropa</span>
         </div>
 
-        <!-- Producto 2 -->
+        <!-- 2 -->
         <div class="producto">
-            <img src="imagenes/producto2.jpg" alt="Nombre del producto">
+            <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Zapatos" alt="Zapatos Casual">
             <h3>Zapatos Casual</h3>
             <p class="precio">$45.00</p>
+            <span class="categoria">👟 Calzado</span>
         </div>
 
-        <!-- Producto 3 -->
+        <!-- 3 -->
         <div class="producto">
-            <img src="imagenes/producto3.jpg" alt="Nombre del producto">
+            <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=Reloj" alt="Reloj Digital">
             <h3>Reloj Digital</h3>
             <p class="precio">$29.99</p>
+            <span class="categoria">⌚ Accesorios</span>
         </div>
 
-        <!-- Agrega más productos aquí... -->
+        <!-- 4 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=Mochila" alt="Mochila Escolar">
+            <h3>Mochila Escolar</h3>
+            <p class="precio">$35.50</p>
+            <span class="categoria">🎒 Accesorios</span>
+        </div>
+
+        <!-- 5 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/9b59b6/ffffff?text=Gafas" alt="Gafas de Sol">
+            <h3>Gafas de Sol</h3>
+            <p class="precio">$15.99</p>
+            <span class="categoria">🕶️ Accesorios</span>
+        </div>
+
+        <!-- 6 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/1abc9c/ffffff?text=Gorra" alt="Gorra Deportiva">
+            <h3>Gorra Deportiva</h3>
+            <p class="precio">$12.50</p>
+            <span class="categoria">🧢 Ropa</span>
+        </div>
+
+        <!-- 7 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/e67e22/ffffff?text=Audifonos" alt="Audífonos Bluetooth">
+            <h3>Audífonos Bluetooth</h3>
+            <p class="precio">$39.99</p>
+            <span class="categoria">🎧 Electrónica</span>
+        </div>
+
+        <!-- 8 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/2c3e50/ffffff?text=Tablet" alt="Tablet 10 pulgadas">
+            <h3>Tablet 10"</h3>
+            <p class="precio">$199.99</p>
+            <span class="categoria">📱 Electrónica</span>
+        </div>
+
+        <!-- 9 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/c0392b/ffffff?text=Chaqueta" alt="Chaqueta de Cuero">
+            <h3>Chaqueta de Cuero</h3>
+            <p class="precio">$89.00</p>
+            <span class="categoria">👕 Ropa</span>
+        </div>
+
+        <!-- 10 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/16a085/ffffff?text=Botella" alt="Botella Deportiva">
+            <h3>Botella Deportiva</h3>
+            <p class="precio">$9.99</p>
+            <span class="categoria">💧 Deportes</span>
+        </div>
+
+        <!-- 11 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/2980b9/ffffff?text=Zapatillas" alt="Zapatillas Running">
+            <h3>Zapatillas Running</h3>
+            <p class="precio">$55.00</p>
+            <span class="categoria">👟 Calzado</span>
+        </div>
+
+        <!-- 12 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/8e44ad/ffffff?text=Perfume" alt="Perfume Premium">
+            <h3>Perfume Premium</h3>
+            <p class="precio">$42.50</p>
+            <span class="categoria">🧴 Belleza</span>
+        </div>
+
+        <!-- 13 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/d35400/ffffff?text=Cartera" alt="Cartera de Mano">
+            <h3>Cartera de Mano</h3>
+            <p class="precio">$28.99</p>
+            <span class="categoria">👛 Accesorios</span>
+        </div>
+
+        <!-- 14 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/27ae60/ffffff?text=Lampara" alt="Lámpara LED">
+            <h3>Lámpara LED</h3>
+            <p class="precio">$18.00</p>
+            <span class="categoria">💡 Hogar</span>
+        </div>
+
+        <!-- 15 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/f1c40f/ffffff?text=Juguete" alt="Juguete Educativo">
+            <h3>Juguete Educativo</h3>
+            <p class="precio">$24.99</p>
+            <span class="categoria">🎮 Juguetes</span>
+        </div>
+
+        <!-- 16 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/34495e/ffffff?text=Calculadora" alt="Calculadora Científica">
+            <h3>Calculadora Científica</h3>
+            <p class="precio">$14.99</p>
+            <span class="categoria">📐 Oficina</span>
+        </div>
+
+        <!-- 17 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Pantalon" alt="Pantalón Deportivo">
+            <h3>Pantalón Deportivo</h3>
+            <p class="precio">$32.00</p>
+            <span class="categoria">👕 Ropa</span>
+        </div>
+
+        <!-- 18 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Cafetera" alt="Cafetera Eléctrica">
+            <h3>Cafetera Eléctrica</h3>
+            <p class="precio">$65.00</p>
+            <span class="categoria">☕ Hogar</span>
+        </div>
+
+        <!-- 19 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/2ecc71/ffffff?text=Libro" alt="Libro de Cocina">
+            <h3>Libro de Cocina</h3>
+            <p class="precio">$22.50</p>
+            <span class="categoria">📚 Libros</span>
+        </div>
+
+        <!-- 20 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=Bicicleta" alt="Bicicleta Montaña">
+            <h3>Bicicleta Montaña</h3>
+            <p class="precio">$350.00</p>
+            <span class="categoria">🚴 Deportes</span>
+        </div>
+
+        <!-- 21 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/9b59b6/ffffff?text=Microondas" alt="Microondas Digital">
+            <h3>Microondas Digital</h3>
+            <p class="precio">$120.00</p>
+            <span class="categoria">🍳 Hogar</span>
+        </div>
+
+        <!-- 22 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/1abc9c/ffffff?text=Maletin" alt="Maletín Ejecutivo">
+            <h3>Maletín Ejecutivo</h3>
+            <p class="precio">$48.99</p>
+            <span class="categoria">💼 Accesorios</span>
+        </div>
+
+        <!-- 23 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/e67e22/ffffff?text=Teclado" alt="Teclado Inalámbrico">
+            <h3>Teclado Inalámbrico</h3>
+            <p class="precio">$34.50</p>
+            <span class="categoria">⌨️ Electrónica</span>
+        </div>
+
+        <!-- 24 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/c0392b/ffffff?text=Sueter" alt="Suéter de Lana">
+            <h3>Suéter de Lana</h3>
+            <p class="precio">$38.00</p>
+            <span class="categoria">👕 Ropa</span>
+        </div>
+
+        <!-- 25 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/16a085/ffffff?text=Mouse" alt="Mouse Gaming">
+            <h3>Mouse Gaming</h3>
+            <p class="precio">$25.99</p>
+            <span class="categoria">🖱️ Electrónica</span>
+        </div>
+
+        <!-- 26 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/2980b9/ffffff?text=Camara" alt="Cámara Digital">
+            <h3>Cámara Digital</h3>
+            <p class="precio">$280.00</p>
+            <span class="categoria">📷 Electrónica</span>
+        </div>
+
+        <!-- 27 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/8e44ad/ffffff?text=Almohada" alt="Almohada Ortopédica">
+            <h3>Almohada Ortopédica</h3>
+            <p class="precio">$29.99</p>
+            <span class="categoria">🛏️ Hogar</span>
+        </div>
+
+        <!-- 28 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/d35400/ffffff?text=Plancha" alt="Plancha de Ropa">
+            <h3>Plancha de Ropa</h3>
+            <p class="precio">$42.00</p>
+            <span class="categoria">👔 Hogar</span>
+        </div>
+
+        <!-- 29 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/27ae60/ffffff?text=SetCocina" alt="Set de Cocina">
+            <h3>Set de Cocina 15pz</h3>
+            <p class="precio">$55.99</p>
+            <span class="categoria">🍳 Hogar</span>
+        </div>
+
+        <!-- 30 -->
+        <div class="producto">
+            <img src="https://via.placeholder.com/300x200/f1c40f/ffffff?text=JuegoMesa" alt="Juego de Mesa">
+            <h3>Juego de Mesa Familiar</h3>
+            <p class="precio">$19.99</p>
+            <span class="categoria">🎲 Juguetes</span>
+        </div>
 
     </main>
 
     <footer>
         <p>© 2026 Mi Tienda - Todos los derechos reservados</p>
+        <p style="font-size: 0.85em; margin-top: 5px;">📞 Contacto: +123 456 7890</p>
     </footer>
 
 </body>
